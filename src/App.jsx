@@ -29,7 +29,7 @@ function App() {
       </section>
       <section className="body">
         <QuestionText q={question} />
-        <AnswerChoices choices={answerChoices} />
+        <AnswerChoices choices={answerChoices} correctAns={0} />
         <div className="buttons">
           <Submit />
           <div className="info-btns">

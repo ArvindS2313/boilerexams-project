@@ -1,3 +1,3 @@
 export default function Hint() {
-    return <button className="Hint">Hint?</button>
+    return <button className="Hint">Hint</button>
 }

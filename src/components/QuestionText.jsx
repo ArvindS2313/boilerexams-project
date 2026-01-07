@@ -1,3 +1,5 @@
+import "./components.css";
+
 export default function QuestionText({q}) {
-    return <div>{q}</div>
+    return <div id="question-text"><p>{q}</p></div>
 }

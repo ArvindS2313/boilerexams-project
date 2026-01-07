@@ -1,3 +1,15 @@
 .top {
-    margin-top: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.top div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }

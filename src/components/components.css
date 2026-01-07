@@ -1,4 +1,54 @@
-#question-number {
+#question-number h1 {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+#exam-info h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#exam-info .type {
+    color: olive;
+}
+
+#question-text p {
+    font-size: 1rem;
+}
+
+#answer-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#choice {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#answer-text {
+    flex-basis: 100%;
+}
+
+#answer-text p {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+#letter button {
+    border-radius: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-btns {
+    display: flex;
+    gap: 0.5rem;
 }
