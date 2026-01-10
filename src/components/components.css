@@ -43,6 +43,23 @@
     border-radius: 20px;
 }
 
+#id-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#id-input label {
+    font-size: 1.25rem;
+}
+
+#id-input input {
+    font-size: 1.25rem;
+    flex-grow: 2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -51,4 +68,17 @@
 .info-btns {
     display: flex;
     gap: 0.5rem;
+}
+
+.error-text {
+    color: red;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.loading {
+    margin-top: 1rem;
+    text-align: center;
 }
