@@ -21,7 +21,15 @@ function App() {
   let [applyIncorrectStyle, setApplyIncorrectStyle] = useState(false);
   let [applyCorrectStyle, setApplyCorrectStyle] = useState(false);
 
+  const clearState = () => {
+    setDisplayError(false);
+    setSelectedAns(null);
+    setApplyCorrectStyle(false);
+    setApplyIncorrectStyle(false);
+  }
+
   const fetchData = async (id) => {
+    clearState();
     setLoading(true);
     setDisplayError(false);
     try {
