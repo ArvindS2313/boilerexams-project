@@ -22,7 +22,6 @@ function App() {
   let [applyCorrectStyle, setApplyCorrectStyle] = useState(false);
 
   const fetchData = async (id) => {
-    console.log("Fetching data for ID: ", id);
     setLoading(true);
     setDisplayError(false);
     try {
@@ -43,11 +42,9 @@ function App() {
     cleanData.qNum = data.number;
     cleanData.year = data.exam.year;
     cleanData.season = (data.exam.season).toLowerCase();
-    cleanData.type = data.exam.type === 0 ? "final" : (data.exam.type === 1 ? "midterm 1" : "midterm 2");
+    cleanData.type = data.exam.number === 0 ? "final" : `midterm ${data.exam.number}`;
     cleanData.choices = data.data.answerChoices.map(choice => choice.body);
     cleanData.correctAns = data.data.solution[0];
-
-    console.log(cleanData);
     return cleanData;
   }
 

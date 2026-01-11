@@ -1,4 +1,12 @@
 import "./components.css";
+import {MathJax, MathJaxContext} from "better-react-mathjax";
+
+const CONFIG = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+}
 
 export default function AnswerText({ind, txt, correctAns, isSelected, changeSelect, 
                                             applyIncorrectStyle, applyCorrectStyle}) {
@@ -14,5 +22,11 @@ export default function AnswerText({ind, txt, correctAns, isSelected, changeSele
         }
     }
 
-    return <div id="answer-text" onClick={changeSelect} ><p style={updateStyle()}>{txt}</p></div>;
+    return <div id="answer-text" onClick={changeSelect} >
+        <p style={updateStyle()}>
+            <MathJaxContext config={CONFIG}>
+                <MathJax>{txt}</MathJax>
+            </MathJaxContext>
+        </p>
+    </div>;
 }
